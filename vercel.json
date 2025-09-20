@@ -1,15 +1,10 @@
 {
   "version": 2,
-  "name": "agrichain",
-  "builds": [
-    {
-      "src": "SIH25/frontend/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
-    }
-  ],
+  "name": "agrichain-frontend",
+  "buildCommand": "cd SIH25/frontend && npm run build",
+  "outputDirectory": "SIH25/frontend/build",
+  "installCommand": "cd SIH25/frontend && npm install",
+  "devCommand": "cd SIH25/frontend && npm start",
   "routes": [
     {
       "src": "/static/(.*)",
